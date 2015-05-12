@@ -135,4 +135,4 @@ Step nine
 ![Step nine](/assets/docs/soldering-the-v1-pcb/11.jpg)
 
 It's time to attach the battery holder. First, peel off the cover over the sticky pad on the battery holder. Then push the pins on the holder through the PCB from behind like in this picture. Once you've pushed it on so it sticks then you should carefuly solder it.
-Put the batteries in the holder and turn the switch on again to make sure the LEDs still come on and flash correctly. If the LED starts flashing then the board is OK and you should start [building the chassis](/posts/building-the-v1-chassis)
+Put the batteries in the holder and turn the switch on again to make sure the LEDs still come on and flash correctly. If the LED starts flashing then the board is OK and you should start [building the chassis](/docs/building-the-v1-chassis/)

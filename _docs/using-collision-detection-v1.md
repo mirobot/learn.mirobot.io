@@ -55,4 +55,4 @@ Connect the other end of this long cable on to the main PCB in the position mark
 Step five
 ---------
 
-Now you can press the button in the web UI marked "Collision Detection" and watch as Mirobot detects collisions and reorients itself. You may need to <a href="/build/firmware_update">update</a> the UI firmware in order to do this.
+Now you can press the button in the web UI marked "Collision Detection" and watch as Mirobot detects collisions and reorients itself. You may need to [update](/docs/update-firmware-v1/) the UI firmware in order to do this.

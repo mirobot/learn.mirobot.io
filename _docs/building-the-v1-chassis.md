@@ -14,7 +14,7 @@ level: core
 The parts
 -------------
 
-You should already have soldered together [the PCB](/posts/soldering-the-v1-pcb/). Now it's time to put the chassis together. The chassis is made out of the six panels shown below.
+You should already have soldered together [the PCB](/docs/soldering-the-v1-pcb/). Now it's time to put the chassis together. The chassis is made out of the six panels shown below.
 
 ![](/assets/docs/building-the-v1-chassis/01.jpg)
 

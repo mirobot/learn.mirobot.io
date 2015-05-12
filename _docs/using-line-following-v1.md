@@ -100,4 +100,4 @@ Connect the other end of this long cable on to the main PCB in the position mark
 Step eight
 ----------
 
-Draw a line approximately 1cm thick in a black pen on white paper, then press the button in the web UI marked "Line Following" and watch as Mirobot follows the line you have just drawn. You may need to [update](/build/firmware_update) the UI firmware in order to do this.
+Draw a line approximately 1cm thick in a black pen on white paper, then press the button in the web UI marked "Line Following" and watch as Mirobot follows the line you have just drawn. You may need to [update](/docs/update-firmware-v1/) the UI firmware in order to do this.
