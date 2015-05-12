@@ -10,6 +10,7 @@ exclude:
  - s3_website.yml
  - README.md
  - bin
+ - vendor
 
 # Build settings
 markdown: kramdown
