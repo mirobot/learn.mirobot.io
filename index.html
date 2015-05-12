@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% capture tags %}{% for doc in site.docs %}{% for tag in doc.tags %}{{ tag }}|{% endfor %}{% endfor %}{% endcapture %}
+{% assign taghash = tags | split:'|' | sort | tag_hash %}
+
+  <div class="centre">
+    <div id="docs">
+      {% for doc in site.docs %}
+        <div class="doc level-{{ doc.level }} type-{{ doc.type }}{% for hw in doc.hardware %} hw-{{ hw }}{% endfor %}">
+          <a class="icon" href="{{ doc.url }}" style="background-image:url('/assets{{ doc.url }}icon.jpg')">&nbsp</a>
+          <a href="{{ doc.url }}"><h2>{{ doc.title }}</h2></a>
+          <p>{{ doc.summary }}</p>
+          <span class="level meta">{{ doc.level | capitalize }}</span>
+          <span class="type meta">{{ doc.type | replace: '-',  ' ' | capitalize }}</span>
+        </div>
+      {% endfor %}
+    </div>
+    <div id="sidebar">
+      <div class="filter" id="type-filter"><h3>Filter by Type</h3><a data-filter="type-instruction" href="#">Instructions</a> <a data-filter="type-challenge" href="#">Challenges</a> <a data-filter="type-lesson-plan" href="#">Lesson plans</a></div>
+      <div class="filter" id="level-filter"><h3>Filter by Skill Level</h3><a data-filter="level-core" href="#">Core</a> <a data-filter="level-beginner" href="#">Beginner</a> <a data-filter="level-intermediate" href="#">Intermediate</a> <a data-filter="level-advanced" href="#">Advanced</a></div>
+      <!--div class="filter" id="tag-filter">
+        <h3>Filter by Tag</h3>
+        {% for tag in taghash %}
+        <a href="#">{{ tag[0] }} <span class="count">[{{ tag[1] }}]</span></a>
+        {% endfor %}
+      </div-->
+      <!--div class="filter" id="hw-filter"><h3>Filter by Hardware</h3><a data-filter="hw-v1" href="#">v1</a> <a data-filter="hw-v2" href="#">v2</a></div-->
+    </div>
+  </div>

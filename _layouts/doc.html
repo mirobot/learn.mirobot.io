@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div id="main" class="centre">
+  <div id="doc">
+    <h1>{{ page.title }}</h1>
+  {{ content }}
+  <script>
+
+var initSolution = function(){
+  var sols = document.querySelectorAll('.solution');
+  for(var i = 0; i< sols.length; i++){
+    var el = sols[i];
+    var button = document.createElement('button');
+    var title = document.createElement('h4');
+    title.innerHTML = "The solution";
+    button.innerHTML = "Show Solution";
+    button.onclick = function(){ this.parentNode.className = 'revealed' }
+    sols[i].insertBefore(button, sols[i].firstChild);
+    sols[i].insertBefore(title, sols[i].firstChild);
+  }
+}
+
+if(window.addEventListener){
+  window.addEventListener('load', initSolution, false);
+}else{
+  window.attachEvent('onload', initSolution);
+}
+
+  </script>
+  </div>
+  <div id="sidebar" class="filter">
+    <p>{{ page.summary }}</p>
+    <div class="type"><h3>Type</h3><a href="" class="type">{{ page.type | capitalize  }}</a></div>
+    <div class="type"><h3>Skill Level</h3><a href="" class="level">{{ page.level | capitalize  }}</a></div>
+    <div class="tags">
+      <h3>Tags</h3>
+      {% for tag in page.tags %}
+        <a href="#" class="tag">{{ tag | capitalize }}</a>
+      {% endfor %}
+    </div>
+    <div class="tags">
+      <h3>Hardware</h3>
+      {% for version in page.hardware %}
+        <a href="#" class="hw">{{ version | capitalize }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
