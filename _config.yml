@@ -9,6 +9,7 @@ exclude:
  - Gemfile.lock
  - s3_website.yml
  - README.md
+ - bin
 
 # Build settings
 markdown: kramdown
