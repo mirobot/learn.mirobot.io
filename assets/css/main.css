@@ -162,8 +162,13 @@ a:visited{color:#999}
   color:#F90;
 }
 
-#tag-filter a{
+#tag-filter a.selected{
   background-color:#0CC;
+}
+#tag-filter a.unselected{
+  border:2px solid #0CC;
+  padding:4px;
+  color:#0CC;
 }
 
 #tag-filter .count{
@@ -227,6 +232,7 @@ a.hw{background-color:#90F}
 
 #home #sidebar{
   margin-top:10px;
+  padding-top:10px;
   float:right;
 }
 
