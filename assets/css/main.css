@@ -301,6 +301,8 @@ a.hw{background-color:#90F}
     width:auto;
     float:left;
     padding:10px;
+    margin:10px;
+    font-size:90%;
   }
   #sidebar h3{
     display:inline-block;
@@ -321,6 +323,9 @@ a.hw{background-color:#90F}
 @media all and (max-width: 545px) {
   #home .doc{
     width:90%
+  }
+  #home #sidebar{
+    font-size:70%;
   }
 }
 
