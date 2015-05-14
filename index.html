@@ -12,7 +12,7 @@ layout: default
       <div class="filter" id="tag-filter">
         <h3>Filter by Tag</h3>
         {% for tag in taghash %}
-        <a href="javascript:void(0);" data-tag="{{ tag[0] | downcase }}">{{ tag[0] }} <span class="count">[{{ tag[1] }}]</span></a>
+        <a href="javascript:void(0);" data-filter="{{ tag[0] | downcase }}">{{ tag[0] }} <span class="count">[{{ tag[1] }}]</span></a>
         {% endfor %}
       </div>
       <!--div class="filter" id="hw-filter"><h3>Filter by Hardware</h3><a data-filter="hw-v1" href="javascript:void(0);">v1</a> <a data-filter="hw-v2" href="javascript:void(0);">v2</a></div-->

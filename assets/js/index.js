@@ -1,5 +1,4 @@
 var hidden = [];
-var visible = [];
 var tags = [];
 
 var docHidden = function(doc){
@@ -33,18 +32,27 @@ var filterDocs = function(){
       docs[i].style.display = '';
     }
   }
+  setUrl();
+}
+
+var setUrl = function(){
+  var url = [];
+  if(hidden.length > 0) url.push("hidden=" + hidden.join('|'));
+  if(tags.length > 0) url.push("tags=" + tags.join('|'));
+  if(url.length === 0){
+    history.replaceState({}, document.title, '/');
+  }else{
+    history.replaceState({}, document.title, '/#' + url.join('&'));
+  }
 }
 
 var enumFilter = function(e){
   if(this.className == "selected"){
-    var i = visible.indexOf(this.getAttribute("data-filter"));
-    if(i != -1) { visible.splice(i, 1); }
     hidden.push(this.getAttribute("data-filter"));
     this.className = "unselected";
   }else{
     var i = hidden.indexOf(this.getAttribute("data-filter"));
     if(i != -1) { hidden.splice(i, 1); }
-    visible.push(this.getAttribute("data-filter"));
     this.className = "selected";
   }
   filterDocs();
@@ -66,15 +74,15 @@ var tagFilter = function(e){
       siblings[i].className = 'unselected';
     }
     this.className = 'selected';
-    tags.push(this.getAttribute("data-tag"));
+    tags.push(this.getAttribute("data-filter"));
   }else{
     // toggle this tag
     if(this.className == "selected"){
-      var i = tags.indexOf(this.getAttribute("data-tag"));
+      var i = tags.indexOf(this.getAttribute("data-filter"));
       if(i != -1) { tags.splice(i, 1); }
       this.className = "unselected";
     }else{
-      tags.push(this.getAttribute("data-tag"));
+      tags.push(this.getAttribute("data-filter"));
       this.className = "selected";
     }
   }
@@ -87,19 +95,52 @@ var tagFilter = function(e){
   return false;
 }
 
-var setupFilter = function(type, fn){
+var setupFilter = function(type, fn, enabledFn){
   var links = document.querySelectorAll("#" + type + " a");
   for(var i=0; i<links.length; i++){
-    visible.push(links[i].getAttribute("data-filter"));
     links[i].onclick = fn;
-    links[i].className = "selected";
+    links[i].className = enabledFn(links[i]) ? "selected" : "unselected";
+  }
+}
+var parseUrl = function(){
+  if(window.location.hash.length <= 1) return;
+  var params = window.location.hash.replace('#', '').split('&').map(function(p){
+    var s = p.split('=');
+    window[s[0]] = s[1].split('|');
+  });
+}
+
+var filterLinkEnabled = function(link){
+  if(hidden.length == 0){
+    return true;
+  }else{
+    for(var i = 0; i< hidden.length; i++){
+      if(link.getAttribute('data-filter').indexOf(hidden[i]) > -1){
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+var tagLinkEnabled = function(link){
+  if(tags.length == 0){
+    return true;
+  }else{
+    for(var i = 0; i< tags.length; i++){
+      if(link.getAttribute('data-filter').indexOf(tags[i]) > -1){
+        return true;
+      }
+    }
+    return false;
   }
 }
 
 var setupFilters = function(){
-  setupFilter('type-filter', enumFilter);
-  setupFilter('level-filter', enumFilter);
-  setupFilter('tag-filter', tagFilter);
+  parseUrl();
+  setupFilter('type-filter', enumFilter, filterLinkEnabled);
+  setupFilter('level-filter', enumFilter, filterLinkEnabled);
+  setupFilter('tag-filter', tagFilter, tagLinkEnabled);
   //setupFilter('hw-filter');
 }
 
