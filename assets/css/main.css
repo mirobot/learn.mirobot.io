@@ -199,8 +199,12 @@ a.hw{background-color:#90F}
   margin:0 auto 0;
 }
 
-#main{
+#docpage{
   margin-top:70px;
+}
+
+#sidebar{
+  float:right;
 }
 
 #doc, #sidebar{
@@ -254,6 +258,36 @@ a.hw{background-color:#90F}
 }
 .revealed button{
   display:none;
+}
+
+@media all and (max-width: 1060px) {
+  #docpage #sidebar{
+    float:left;
+    width:auto;
+    padding:10px;
+  }
+  #docpage #sidebar h3, #docpage #sidebar div{
+    display:inline-block;
+  }
+  #docpage .centre{
+    width:760px;
+  }
+  #docpage #doc{
+    margin:10px 0 0 10px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  #docpage #sidebar{
+    margin:0 10px;
+  }
+  #docpage.centre{
+    width:100%;
+  }
+  #docpage #doc{
+    margin:10px 10px 0 10px;
+    width:auto; !important
+  }
 }
 
 @media all and (max-width: 1140px) {

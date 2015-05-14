@@ -2,7 +2,24 @@
 layout: default
 ---
 
-<div id="main" class="centre">
+<div id="docpage" class="centre">
+  <div id="sidebar" class="filter">
+    <p>{{ page.summary }}</p>
+    <div class="type"><h3>Type</h3><a href="javascript:void(0);" class="type">{{ page.type | capitalize  }}</a></div>
+    <div class="type"><h3>Skill Level</h3><a href="javascript:void(0);" class="level">{{ page.level | capitalize  }}</a></div>
+    <div class="tags">
+      <h3>Tags</h3>
+      {% for tag in page.tags %}
+        <a href="javascript:void(0);" class="tag">{{ tag | capitalize }}</a>
+      {% endfor %}
+    </div>
+    <div class="tags">
+      <h3>Hardware</h3>
+      {% for version in page.hardware %}
+        <a href="javascript:void(0);" class="hw">{{ version | capitalize }}</a>
+      {% endfor %}
+    </div>
+  </div>
   <div id="doc">
     <h1>{{ page.title }}</h1>
   {{ content }}
@@ -29,22 +46,5 @@ if(window.addEventListener){
 }
 
   </script>
-  </div>
-  <div id="sidebar" class="filter">
-    <p>{{ page.summary }}</p>
-    <div class="type"><h3>Type</h3><a href="javascript:void(0);" class="type">{{ page.type | capitalize  }}</a></div>
-    <div class="type"><h3>Skill Level</h3><a href="javascript:void(0);" class="level">{{ page.level | capitalize  }}</a></div>
-    <div class="tags">
-      <h3>Tags</h3>
-      {% for tag in page.tags %}
-        <a href="javascript:void(0);" class="tag">{{ tag | capitalize }}</a>
-      {% endfor %}
-    </div>
-    <div class="tags">
-      <h3>Hardware</h3>
-      {% for version in page.hardware %}
-        <a href="javascript:void(0);" class="hw">{{ version | capitalize }}</a>
-      {% endfor %}
-    </div>
   </div>
 </div>
