@@ -91,7 +91,7 @@ a:visited{color:#999}
 
 #home .doc .icon{
   display:block;
-  width:244px;
+  width:100%;
   height:150px;
   background-size: cover;
   -webkit-border-top-left-radius: 10px;
@@ -223,10 +223,11 @@ a.hw{background-color:#90F}
 
 #home #sidebar{
   margin-top:10px;
+  float:right;
 }
 
 #home .centre{
-  width:1140px;
+  width:1100px;
 }
 
 #doc img{
@@ -253,5 +254,33 @@ a.hw{background-color:#90F}
 }
 .revealed button{
   display:none;
+}
+
+@media all and (max-width: 1140px) {
+  #home #sidebar{
+    width:auto;
+    float:left;
+    padding:10px;
+  }
+  #sidebar h3{
+    display:inline-block;
+  }
+  #home .centre{
+    position:relative;
+    width:850px;
+  }
+  #docs{
+    width:100%;
+  }
+}
+@media all and (max-width: 840px) {
+  #home .centre{
+    width:100%;
+  }
+}
+@media all and (max-width: 545px) {
+  #home .doc{
+    width:90%
+  }
 }
 
