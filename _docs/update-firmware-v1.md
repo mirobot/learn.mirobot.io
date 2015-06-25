@@ -17,9 +17,9 @@ Download the app
 
 First, you'll need to download the updater application:
 
- - [Mac Version](https://github.com/bjpirt/mirobot-updater/releases/download/v1.1.0/mirobot_updater_1.1.0_mac.zip)
- - [Windows Version](https://github.com/bjpirt/mirobot-updater/releases/download/v1.1.0/mirobot_updater_1.1.0_win.zip)
- - Linux Version ([32 bit](https://github.com/bjpirt/mirobot-updater/releases/download/v1.1.0/mirobot_updater_1.1.0_linux32.zip), [64 bit](https://github.com/bjpirt/mirobot-updater/releases/download/v1.1.0/mirobot_updater_1.1.0_linux64.zip)) - tested on Ubuntu
+ - [Mac Version](https://github.com/bjpirt/mirobot-updater/releases/download/v1.2.0/mirobot_updater_1.2.0_mac.zip)
+ - [Windows Version](https://github.com/bjpirt/mirobot-updater/releases/download/v1.2.0/mirobot_updater_1.2.0_win.zip)
+ - Linux Version ([32 bit](https://github.com/bjpirt/mirobot-updater/releases/download/v1.2.0/mirobot_updater_1.2.0_linux32.zip), [64 bit](https://github.com/bjpirt/mirobot-updater/releases/download/v1.2.0/mirobot_updater_1.2.0_linux64.zip)) - tested on Ubuntu
 
 Unzip the folder and run the application
 
@@ -41,6 +41,14 @@ Enter the IP address and click connect. You should see the app update with the c
 Update
 ------
 
-You can click the "Update" button next to the firmware you want to update.
+You can click the "Update" button next to the firmware you want to update. If the firmware looks up to date but didn't install properly you can still force update it to try again.
 
-**Warning: there is always a risk when updating the Arduino over WiFi that the process will fail and leave it in a bad state**. If this happens, restart the updater application and keep trying to manually update the firmware until it succeeds. You will be prompted to press the reset button on the Arduino which will start the process. The best approach is not to update the Arduino unless you have a specific reason for doing so.
+
+Updating the Arduino firmware
+=============================
+It is no longer possible to update the Arduino firmware over the WiFi network because it has proven itself to have too great a risk of leaving it in a broken state. To update the Arduino firmware, you will need a USB to Serial converter compatible with the 6 pin header that's available on the Arduino. There are many different models of these converters, but I have found that those based on an FTDI chip are the best supported in general. Some examples of suitable converters are:
+
+ * [FTDI Friend](https://www.adafruit.com/products/284) from Adafruit. These are pretty well distributed so check if they're available locally
+ * [FTDI Cable](https://www.adafruit.com/products/70). Search locally for "TTL-232R-3V3" to find one of these closer to you
+
+If you're looking for a much cheaper option then you should search for "CP2102 USB Serial" on eBay to find a converter for a few dollars, though there are so many variants of these that it's difficult to recommend a specific one. Once you've got your converter, then you should follow [the instructions](../customise-firmware/) to update the firmware using the Arduino IDE
