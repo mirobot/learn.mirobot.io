@@ -5,6 +5,7 @@ layout: doc
 tags:
   - Arduino
   - Modifying
+  - Firmware
 type: instruction
 hardware:
   - v1
