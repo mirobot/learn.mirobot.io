@@ -51,4 +51,4 @@ It is no longer possible to update the Arduino firmware over the WiFi network be
  * [FTDI Friend](https://www.adafruit.com/products/284) from Adafruit. These are pretty well distributed so check if they're available locally
  * [FTDI Cable](https://www.adafruit.com/products/70). Search locally for "TTL-232R-3V3" to find one of these closer to you
 
-If you're looking for a much cheaper option then you should search for "CP2102 USB Serial" on eBay to find a converter for a few dollars, though there are so many variants of these that it's difficult to recommend a specific one. Once you've got your converter, then you should follow [the instructions](../customise-firmware/) to update the firmware using the Arduino IDE
+If you're looking for a much cheaper option then you should search for "CP2102 USB Serial" on eBay to find a converter for a few dollars, though there are so many variants of these that it's difficult to recommend a specific one. Once you've got your converter, then you should follow [the instructions](../update-arduino-serial/) to update the firmware using the Arduino IDE over serial.

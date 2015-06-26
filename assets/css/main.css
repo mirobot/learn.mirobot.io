@@ -36,6 +36,7 @@ li{
 p{ margin:10px 0;}
 
 strong { font-weight: bold}
+em{ font-style:italic}
 
 a{color:#999;}
 a:visited{color:#999}
