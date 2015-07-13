@@ -37,7 +37,7 @@ Distribute the Mirobot kits around the class and ask the students to unpack the 
 
 Have a class discussion about what the different parts might do:
 
- - **Steper Motor** - used to turn the wheels. A stepper motor is a special type of motor that can turn accurately.
+ - **Stepper Motor** - used to turn the wheels. A stepper motor is a special type of motor that can turn accurately.
  - **Servo** - used to move the pen arm up and down. A servo is a normal motor with a gearbox and sensors that lets the arm turn to a specified direction.
  - **Pegs** - used to hold the robot chassis together.
  - **Rear Wheel** - used to balance the robot. There are two large wheels that move and this wheel to keep it stable.
