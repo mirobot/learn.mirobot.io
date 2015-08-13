@@ -164,7 +164,7 @@ Find the pieces of the pen arm support (the remaining pieces on panel 3) and slo
 Step thirteen
 -------------
 
-Push these pieces into the slots on the pen arm like in this photo. You can adjust the pen using these screws so it is aligned with the centre of the wheels - look for the round, wobbly-edged tool you can use to do this. If it's not properly aligned you'll get bumps at the corners of your lines when you draw.
+Push these pieces into the slots on the pen arm like in this photo. You can adjust the pen using these screws so it is aligned with the centre of the wheels - look for the round, wobbly-edged tool you can use to do this. If it's not properly aligned you'll get bumps at the corners of your lines when you draw. Once it's in, you can put the elastic band in place like in the photo.
 
 ![](/assets/docs/building-the-v2-mirobot/22.jpg)
 
@@ -199,7 +199,7 @@ Push the rear wheel into the hole at the back of the robot from underneath then 
 
 ![](/assets/docs/building-the-v2-mirobot/26.jpg)
 
-Congratulations! Mirobot is now fully built!
+Congratulations! Mirobot is now fully built! There should be two pieces left; a round tool for adjusting the screws on the pen holder (you can slot this in next to the batteyr holder to keep it safe) and an L shaped piece which you can use to align the pen in the pen holder (details on how to use this will follow!)
 
 
 Step seventeen
