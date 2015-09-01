@@ -86,7 +86,7 @@ Hook both of the wheel covers (the pieces with "Mirobot" on them on panel 6) on 
 Step five
 -------------
 
-Push the front piece (panel 6) down so that it locks the two wheel covers in place. Make sure it is pushed down fully into the base and is properly aligned with the sides and the wheel covers.
+Push the front piece (panel 5) down so that it locks the two wheel covers in place. Make sure it is pushed down fully into the base and is properly aligned with the sides and the wheel covers.
 
 ![](/assets/docs/building-the-v2-mirobot/13.jpg)
 
@@ -94,7 +94,7 @@ Push the front piece (panel 6) down so that it locks the two wheel covers in pla
 Step six
 -------------
 
-Push the main controller board on to the front of the robot like in the photo below.
+Push the main controller board on to the front of the robot like in the photo below. There are two slots in the board which the base of the chassis pushes through. Also, the socket fo rthe Arduino on the board pushes through the front piece that you added in the previous step.
 
 ![](/assets/docs/building-the-v2-mirobot/14.jpg)
 
@@ -120,7 +120,7 @@ Push the back of the battery compartment (panel 3) down through the base into th
 Step nine
 -------------
 
-Loop one of the stepper motor cables around the two hooks in the piece you just added like in the photo below and plug the end of the cable in to the socket on the main controller board
+Loop one of the stepper motor cables around the two hooks in the piece you just added like in the photo below and plug the end of the cable in to the socket on the main controller board. You'll need to push quite firmly so make sure to hold the main controller board in place while you push.
 
 ![](/assets/docs/building-the-v2-mirobot/17.jpg)
 
@@ -148,7 +148,7 @@ On the underside, wind the servo wire around the hooks you wound the stepper wir
 Step eleven
 -------------
 
-Screw the two screws into the holes in the pen arm (panel 1) as in the picture
+Screw the two screws into the holes in the pen arm (panel 1) as in the picture. There's a tool included (the round cog-like piece in panel 2) which you can use to turn the screws.
 
 ![](/assets/docs/building-the-v2-mirobot/20.jpg)
 
@@ -164,7 +164,7 @@ Find the pieces of the pen arm support (the remaining pieces on panel 3) and slo
 Step thirteen
 -------------
 
-Push these pieces into the slots on the pen arm like in this photo. You can adjust the pen using these screws so it is aligned with the centre of the wheels - look for the round, wobbly-edged tool you can use to do this. If it's not properly aligned you'll get bumps at the corners of your lines when you draw. Once it's in, you can put the elastic band in place like in the photo.
+Push these pieces into the slots on the pen arm like in this photo. You can adjust the pen by turning these screws with the tool so it is aligned with the centre of the wheels. If it's not properly aligned you'll get bumps at the corners of your lines when you draw. Once it's in, you can put the elastic band in place like in the photo. There are two elastic bands included so you should have one spare.
 
 ![](/assets/docs/building-the-v2-mirobot/22.jpg)
 
@@ -188,7 +188,7 @@ Push the wire of the battery holder through the hole in the base
 
 ![](/assets/docs/building-the-v2-mirobot/25.jpg)
 
-On the underside, plug it into the power socket on the main controller board. You may need to wind it around some other cables to keep it nice and neat.
+On the underside, plug it into the power socket on the main controller board. You may need to wind it around some other cables slightly to keep it nice and neat. Don't wind it too tightly otherwise it can be hard to get it out when you chenge the batteries.
 
 ![](/assets/docs/building-the-v2-mirobot/25a.jpg)
 
@@ -199,7 +199,7 @@ Push the rear wheel into the hole at the back of the robot from underneath then 
 
 ![](/assets/docs/building-the-v2-mirobot/26.jpg)
 
-Congratulations! Mirobot is now fully built! There should be two pieces left; a round tool for adjusting the screws on the pen holder (you can slot this in next to the batteyr holder to keep it safe) and an L shaped piece which you can use to align the pen in the pen holder (details on how to use this will follow!)
+Congratulations! Mirobot is now fully built! There should be two pieces left; a round tool for adjusting the screws on the pen holder (you can slot this in next to the battery holder to keep it safe) and an L shaped piece which you can use to align the pen in the pen holder (details on how to use this will follow!)
 
 
 Step seventeen
