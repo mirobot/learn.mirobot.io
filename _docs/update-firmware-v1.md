@@ -6,8 +6,7 @@ tags:
   - WiFi
   - Firmware
   - Updating
-hardware:
-  - v1
+hardware: v1
 type: instruction
 level: core
 ---

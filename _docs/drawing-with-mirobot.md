@@ -6,9 +6,7 @@ tags:
   - Setup
   - Using
   - Drawing
-hardware:
-  - v1
-  - v2
+hardware: all
 type: instruction
 level: core
 ---

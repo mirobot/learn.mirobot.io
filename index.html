@@ -7,6 +7,7 @@ layout: default
 
   <div class="centre">
     <div id="sidebar">
+      <div class="filter" id="hw-filter"><h3>Filter by Version</h3><a data-filter="hw-v1" href="javascript:void(0);">v1</a> <a data-filter="hw-v2" href="javascript:void(0);">v2</a></div>
       <div class="filter" id="type-filter"><h3>Filter by Type</h3><a data-filter="type-instruction" href="javascript:void(0);">Instructions</a> <a data-filter="type-challenge" href="javascript:void(0);">Challenges</a> <a data-filter="type-lesson-plan" href="javascript:void(0);">Lesson plans</a></div>
       <div class="filter" id="level-filter"><h3>Filter by Skill Level</h3><a data-filter="level-core" href="javascript:void(0);">Core</a> <a data-filter="level-beginner" href="javascript:void(0);">Beginner</a> <a data-filter="level-intermediate" href="javascript:void(0);">Intermediate</a> <a data-filter="level-advanced" href="javascript:void(0);">Advanced</a></div>
       <div class="filter" id="tag-filter">
@@ -15,17 +16,19 @@ layout: default
         <a href="javascript:void(0);" data-filter="{{ tag[0] | downcase }}">{{ tag[0] }} <span class="count">[{{ tag[1] }}]</span></a>
         {% endfor %}
       </div>
-      <!--div class="filter" id="hw-filter"><h3>Filter by Hardware</h3><a data-filter="hw-v1" href="javascript:void(0);">v1</a> <a data-filter="hw-v2" href="javascript:void(0);">v2</a></div-->
     </div>
     <div id="docs">
-      {% for doc in site.docs %}
-        <div class="doc level-{{ doc.level }} type-{{ doc.type }}{% for hw in doc.hardware %} hw-{{ hw }}{% endfor %}" data-tags="{% for tag in doc.tags %}{{ tag | downcase }}|{% endfor %}">
-          <a class="icon" href="{{ doc.url }}" style="background-image:url('/assets{{ doc.url }}icon.jpg')">&nbsp</a>
-          <a href="{{ doc.url }}"><h2>{{ doc.title }}</h2></a>
-          <p>{{ doc.summary }}</p>
-          <span class="level meta">{{ doc.level | capitalize }}</span>
-          <span class="type meta">{{ doc.type | replace: '-',  ' ' | capitalize }}</span>
-        </div>
+      {% assign v2 = (site.docs | where: "hardware" , "v2") %}
+      {% for doc in v2 %}
+        {% include doc.html doc=doc %}
+      {% endfor %}
+      {% assign all = (site.docs | where: "hardware" , "all") %}
+      {% for doc in all %}
+        {% include doc.html doc=doc %}
+      {% endfor %}
+      {% assign v1 = (site.docs | where: "hardware" , "v1") %}
+      {% for doc in v1 %}
+        {% include doc.html doc=doc %}
       {% endfor %}
     </div>
   </div>

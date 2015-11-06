@@ -8,9 +8,7 @@ tags:
   - Firmware
   - Serial
 type: instruction
-hardware:
-  - v1
-  - v2
+hardware: all
 level: intermediate
 ---
 

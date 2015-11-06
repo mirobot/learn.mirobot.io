@@ -5,8 +5,7 @@ layout: doc
 tags:
   - Sound
   - Addons
-hardware:
-  - v1
+hardware: v1
 type: instruction
 level: intermediate
 ---

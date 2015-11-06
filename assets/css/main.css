@@ -74,6 +74,7 @@ a:visited{color:#999}
 
 #home .doc{
   display:block;
+  position:relative;
   width: 244px;
   display: inline-block;
   vertical-align: top;
@@ -187,8 +188,8 @@ a:visited{color:#999}
 
 .doc .type.meta, a.type{background-color:#3C3}
 .doc .level.meta, a.level{background-color:#F90}
+.doc .hw.meta, a.hw{background-color:#90F}
 a.tag{background-color:#0CC}
-a.hw{background-color:#90F}
 
 .doc .meta{
   display: inline-block;
@@ -199,6 +200,11 @@ a.hw{background-color:#90F}
   color:#FFF;
 }
 
+.doc .hw.meta{
+  position:absolute;
+  top:10px;
+  left:-3px;
+}
 
 .centre{
   width:1040px;
@@ -265,6 +271,10 @@ a.hw{background-color:#90F}
 }
 .revealed button{
   display:none;
+}
+
+p.hw-warning{
+  font-weight:bold;
 }
 
 @media all and (max-width: 1060px) {

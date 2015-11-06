@@ -5,9 +5,7 @@ layout: doc
 tags:
   - Challenge
   - Drawing
-hardware:
-  - v1
-  - v2
+hardware: all
 type: challenge
 level: beginner
 ---

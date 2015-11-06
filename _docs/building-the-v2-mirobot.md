@@ -5,8 +5,7 @@ layout: doc
 tags:
   - Building
   - Chassis
-hardware:
-  - v2
+hardware: v2
 type: instruction
 level: core
 ---

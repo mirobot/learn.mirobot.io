@@ -141,7 +141,8 @@ var setupFilters = function(){
   setupFilter('type-filter', enumFilter, filterLinkEnabled);
   setupFilter('level-filter', enumFilter, filterLinkEnabled);
   setupFilter('tag-filter', tagFilter, tagLinkEnabled);
-  //setupFilter('hw-filter');
+  setupFilter('hw-filter', enumFilter, filterLinkEnabled);
+  filterDocs();
 }
 
 if (window.addEventListener) {

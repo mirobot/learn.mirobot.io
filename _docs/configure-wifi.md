@@ -6,8 +6,7 @@ tags:
   - WiFi
   - Setup
   - Using
-hardware:
-  - v1
+hardware: v1
 type: instruction
 level: core
 ---

@@ -6,8 +6,7 @@ tags:
   - Building
   - PCB
   - Soldering
-hardware:
-  - v1
+hardware: v1
 type: instruction
 level: core
 ---

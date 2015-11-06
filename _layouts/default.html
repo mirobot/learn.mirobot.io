@@ -6,7 +6,9 @@
         <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=no">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="/assets/css/main.css">
-        <script type="text/javascript" src="/assets/js/index.js"></script>
+        {% if page.url == '/index.html' %}
+          <script type="text/javascript" src="/assets/js/index.js"></script>
+        {% endif %}
         {% if page.stylesheets %}
           {% for sheet in page.stylesheets %}
             <link rel="stylesheet" href="/assets/apps{{ page.url }}{{ sheet }}">

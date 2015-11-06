@@ -6,8 +6,7 @@ tags:
   - Building
   - Schools
   - Lesson Plan
-hardware:
-  - v1
+hardware: v1
 type: lesson-plan
 level: beginner
 ---
