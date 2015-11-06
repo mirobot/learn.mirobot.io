@@ -93,7 +93,7 @@ Push the front piece (panel 5) down so that it locks the two wheel covers in pla
 Step six
 -------------
 
-Push the main controller board on to the front of the robot like in the photo below. There are two slots in the board which the base of the chassis pushes through. Also, the socket fo rthe Arduino on the board pushes through the front piece that you added in the previous step.
+Push the main controller board on to the front of the robot like in the photo below. There are two slots in the board which the base of the chassis pushes through. Make sure the socket for the Arduino on the board pushes through the slot in the front piece that you added in the previous step. It won't go in if you've already put the Arduino into its socket so don't do that yet.
 
 ![](/assets/docs/building-the-v2-mirobot/14.jpg)
 
@@ -194,11 +194,11 @@ On the underside, plug it into the power socket on the main controller board. Yo
 Step sixteen
 -------------
 
-Push the rear wheel into the hole at the back of the robot from underneath then click it into place
+Push the rear wheel into the hole at the back of the robot from underneath then click it into place. It can be a tight fit, so if it's difficult, press it down on a table.
 
 ![](/assets/docs/building-the-v2-mirobot/26.jpg)
 
-Congratulations! Mirobot is now fully built! There should be two pieces left; a round tool for adjusting the screws on the pen holder (you can slot this in next to the battery holder to keep it safe) and an L shaped piece which you can use to align the pen in the pen holder (details on how to use this will follow!)
+Congratulations! Mirobot is now fully built! There should be two pieces left; a round tool for adjusting the screws on the pen holder and an L shaped piece which you can use to align the pen in the pen holder. [See here for details on how to do this](/docs/adjusting-the-pen-v2). These both slot in next to the battery holder to keep them safe.
 
 
 Step seventeen
@@ -208,5 +208,5 @@ Put 4 AA batteries into the battery holder and turn on Mirobot. You should see a
 
 Join this network and once it has successfully connected you can visit [http://local.mirobot.io](http://local.mirobot.io) in your web browser.
 
-This should load a web page which lets you drag and drop commands to program Mirobot. Once you've had some fun with this, you can join it to your existing wifi network by clicking on "Configure WiFi" in red at the top right of the web page. When it's on your network, take a look at [Mirobot Apps](http://apps.mirobot.io) to explore more things to do with Mirobot.
+This should load a web page which lets you drag and drop commands to program Mirobot. Once you've had some fun with this, you can join it to your existing wifi network by clicking on "Configure WiFi" in red at the top right of the web page. When it's on your network, take a look at [Mirobot Apps](http://apps.mirobot.io) to explore more things to do with Mirobot. Here are some [challenges](/#tags=challenge) to keep you busy!
 
