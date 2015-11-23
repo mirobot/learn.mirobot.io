@@ -98,6 +98,13 @@ Calibrator.prototype = {
       this.updateConnectionState();
       this.getSlackState();
       this.getDistanceState();
+      this.mirobot.version(function(e, msg){
+        if(/^\d+\.\d+\.\d+$/.test(msg.msg)){
+          if(msg.msg < '2.0.4'){
+            alert("Please upgrade your Arduino firmware to version 2.0.4 or greater in order to support calibration")
+          }
+        }
+      });
       document.querySelector('#init .message').innerHTML = "Successfully connected";
     }
   },
