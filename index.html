@@ -18,17 +18,23 @@ layout: default
       </div>
     </div>
     <div id="docs">
-      {% assign v2 = (site.docs | where: "hardware" , "v2") %}
+      {% assign v2 = (site.docs | where: "hardware" , "v2" %}
       {% for doc in v2 %}
-        {% include doc.html doc=doc %}
+        {% if doc.frontpage != false %}
+          {% include doc.html doc=doc %}
+        {% endif %}
       {% endfor %}
       {% assign all = (site.docs | where: "hardware" , "all") %}
       {% for doc in all %}
-        {% include doc.html doc=doc %}
+        {% if doc.frontpage != false %}
+          {% include doc.html doc=doc %}
+        {% endif %}
       {% endfor %}
       {% assign v1 = (site.docs | where: "hardware" , "v1") %}
       {% for doc in v1 %}
-        {% include doc.html doc=doc %}
+        {% if doc.frontpage != false %}
+          {% include doc.html doc=doc %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>
