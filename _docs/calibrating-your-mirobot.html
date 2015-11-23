@@ -38,7 +38,7 @@ frontpage: false
 #init input{
   width:200px;
 }
-#distance input{
+#distance input, #turn input{
   width:40px;
 }
 </style>
@@ -67,9 +67,16 @@ frontpage: false
   <div class="stepfour" style="display:none">Calibration complete</div>
 </div>
 
-<!--h2>Step four: calibrate the turning angle (optional)</h2>
+<h2>Step four: calibrate the turning angle (optional)</h2>
 <p>If you've completed step three, the motors should be calibrated so that the angles are also accurate. If Mirobot is not drawing an exact angle then you can calibrate this here.</p>
-<p>We will make Mirobot draw a line then rotate 360 degrees and draw another line. The lines should be perfectly straight. If they are not then you can increase or reduce the angle and repeat until they are straight.</p-->
+<p>We will make Mirobot draw a line then rotate 360 degrees and draw another line. The lines should be perfectly straight. If they are not then you can increase or reduce the angle and repeat until they are straight. You'll need a protractor to measure how far you need to adjust the angle.</p>
+<div id="turn" class="cal connectrequired">
+  <div class="stepone">Click here to draw the line: <button id="draw">Draw</button></div>
+  <div class="steptwo" style="display:none">Drawing the line now</div>
+  <div class="stepthree" style="display:none">Enter the number of degrees you'd like to add (+ve number) or remove (-ve number) to make the line straight: <input type="text" value="" class="diff"> degrees <button id="calibrate">Calibrate</button></div>
+  <div class="stepfour" style="display:none">Calibration complete</div>
+</div>
+
 <script src="http://apps.mirobot.io/assets/js/mirobot.js"></script>
 <!--script src="/assets/docs/calibrating-your-mirobot/mirobot.js"></script-->
 <script src="/assets/docs/calibrating-your-mirobot/cal.js"></script>
