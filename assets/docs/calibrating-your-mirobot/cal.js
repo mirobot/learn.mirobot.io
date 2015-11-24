@@ -98,11 +98,11 @@ Calibrator.prototype = {
     document.querySelector('#turn .steptwo').style.display = '';
     self.mirobot.pendown(function(e){
       if(e === 'complete'){
-        self.mirobot.forward(10, function(e){
+        self.mirobot.forward(100, function(e){
           if(e === 'complete'){
-            self.mirobot.right(36, function(e){
+            self.mirobot.right(360, function(e){
               if(e === 'complete'){
-                self.mirobot.forward(10, function(e){
+                self.mirobot.forward(100, function(e){
                   if(e === 'complete'){
                     document.querySelector('#turn .steptwo').style.display = 'none';
                     document.querySelector('#turn .stepthree').style.display = '';
