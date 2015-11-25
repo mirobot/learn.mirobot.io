@@ -98,11 +98,11 @@ Calibrator.prototype = {
     document.querySelector('#turn .steptwo').style.display = '';
     self.mirobot.pendown(function(e){
       if(e === 'complete'){
-        self.mirobot.forward(100, function(e){
+        self.mirobot.forward(50, function(e){
           if(e === 'complete'){
             self.mirobot.right(360, function(e){
               if(e === 'complete'){
-                self.mirobot.forward(100, function(e){
+                self.mirobot.forward(50, function(e){
                   if(e === 'complete'){
                     document.querySelector('#turn .steptwo').style.display = 'none';
                     document.querySelector('#turn .stepthree').style.display = '';
@@ -126,8 +126,8 @@ Calibrator.prototype = {
     var newCal = ((360 + diff) / 360) * this.turnCal;
     this.mirobot.calibrateTurn(newCal, function(e){
       if(e === 'complete'){
-        document.querySelector('#distance .stepthree').style.display = 'none';
-        document.querySelector('#distance .stepfour').style.display = '';
+        document.querySelector('#turn .stepthree').style.display = 'none';
+        document.querySelector('#turn .stepfour').style.display = '';
       }
     });
   },
@@ -180,7 +180,7 @@ Calibrator.prototype = {
 
 function load(){
   if(!!window.Mirobot){
-    new Calibrator();
+    window.cal = new Calibrator();
   }else{
     window.setTimeout(load, 500);
   }
