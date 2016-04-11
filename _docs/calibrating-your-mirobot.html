@@ -41,42 +41,48 @@ frontpage: false
 #distance input, #turn input{
   width:40px;
 }
+#init div{
+  display:inline-block;
+}
+.hidden{
+  display:none !important;
+}
 </style>
 <p>In this tutorial we'll connect to your Mirobot and calibrate it so that it's more accurate when drawing things</p>
 
 <h2>Step one: Connect to your Mirobot</h2>
 <p>Make sure you've already got your Mirobot on your WiFi network and can access it via its IP address or by bonjour if you have a Mac or Linux</p>
-<div id="init" class="cal">Network address: <input type="text" id="address" value=""/> <button id="connect">Connect</button>
-<span class="message"> </span>
+<div id="init" class="cal">
+  Network address: <input type="text" id="manualAddress" class="hidden" value=""/><select id="autoAddress" class="hidden"></select> <button id="connect">Connect</button>
+  <span class="message"> </span>
 </div>
 
-<h2>Step two: calibrate the motors</h2>
-<p>The motors that are used in Mirobot have gears to make them turn slowly, but these gears also have some play in them which can make Mirobot less accurate when they change direction.</p>
-<p>This calibration process will move the stepper motors a small number of steps backwards and forwards until you can detect how many steps it takes to pick up the slack in the gears.</p>
-<p>Increase the amount of steps as high as you can without making Mirobot move</p>
-<div id="slack" class="cal connectrequired"> <button id="start">Start</button> <button id="less">Less steps</button> <span class="steps">0</span> steps <button id="more">More steps</button> <button id="stop">Stop</button></div>
-
-<h2>Step three: calibrate the distance</h2>
+<h2>Step two: calibrate the distance</h2>
 <p>In order to make Mirobot draw lines of exactly the right length we can calibrate how many steps it takes to move a set distance. You'll need a ruler to do this.</p>
-<p>First, make sure you've put a pen fitted that's ready to draw and that Mirobot is on a piece of paper</p>
+<p>First, make sure you've got a pen fitted that's ready to draw and that Mirobot is on a piece of paper</p>
 <p>Now, enter the longest length of line that you can fit on the paper and click the draw button. The longer the line is, the more accurate the calibration will be.</p>
 <div id="distance" class="cal connectrequired">
   <div class="stepone">Enter the length of line you want to draw: <input type="text" value="150" class="desired"> mm <button id="draw">Draw</button></div>
-  <div class="steptwo" style="display:none">Drawing the line now</div>
-  <div class="stepthree" style="display:none">Enter the length of the line that was drawn: <input type="text" value="150" class="actual"> mm <button id="calibrate">Calibrate</button></div>
-  <div class="stepfour" style="display:none">Calibration complete</div>
+  <div class="steptwo hidden">Drawing the line</div>
+  <div class="stepthree hidden">Enter the length of the line that was drawn: <input type="text" value="150" class="actual"> mm <button id="calibrate">Calibrate</button></div>
+  <div class="stepfour hidden">Calibration complete</div>
 </div>
 
-<h2>Step four: calibrate the turning angle (optional)</h2>
-<p>If you've completed step three, the motors should be calibrated so that the angles are also accurate. If Mirobot is not drawing an exact angle then you can calibrate this here.</p>
+<h2>Step three: calibrate the turning angle (optional)</h2>
+<p>If you've completed step two, the motors should be calibrated so that the angles are also accurate. If Mirobot is not drawing an exact angle then you can calibrate this separately here.</p>
 <p>We will make Mirobot draw a line then rotate 360 degrees and draw another line. The lines should be perfectly straight. If they are not then you can increase or reduce the angle and repeat until they are straight. You'll need a protractor to measure how far you need to adjust the angle.</p>
 <div id="turn" class="cal connectrequired">
   <div class="stepone">Click here to draw the line: <button id="draw">Draw</button></div>
-  <div class="steptwo" style="display:none">Drawing the line now</div>
-  <div class="stepthree" style="display:none">Enter the number of degrees you'd like to add (+ve number) or remove (-ve number) to make the line straight: <input type="text" value="" class="diff"> degrees <button id="calibrate">Calibrate</button></div>
-  <div class="stepfour" style="display:none">Calibration complete</div>
+  <div class="steptwo hidden">Drawing the line</div>
+  <div class="stepthree hidden">Enter the number of degrees you'd like to add (+ve number) or remove (-ve number) to make the line straight: <input type="text" value="" class="diff"> degrees <button id="calibrate">Calibrate</button></div>
+  <div class="stepfour hidden">Calibration complete</div>
 </div>
 
+<h2>Step four: calibrate the motors (optional)</h2>
+<p>The motors that are used in Mirobot have gears to make them turn slowly, but these gears also have some play in them which can make Mirobot less accurate when they change direction.</p>
+<p>This calibration process will move the stepper motors a small number of steps backwards and forwards until you can detect how many steps it takes to pick up the slack in the gears.</p>
+<p>Increase the amount of steps as high as you can without making Mirobot move then click stop when you're on the limit.</p>
+<div id="slack" class="cal connectrequired"> <button id="start">Start</button> <button id="less">-1</button> <span class="steps">0</span> steps <button id="more">+1</button> <button id="stop">Stop</button></div>
+
 <script src="http://apps.mirobot.io/assets/js/mirobot.js"></script>
-<!--script src="/assets/docs/calibrating-your-mirobot/mirobot.js"></script-->
 <script src="/assets/docs/calibrating-your-mirobot/cal.js"></script>
